@@ -81,10 +81,9 @@ function Typeahead({ handleSelect, suggestions }) {
                 case "ArrowUp": {
                   e.preventDefault();
                   if (selectedSuggestionIndex > 0) {
-                    setSelectedSuggestionIndex(prevState => {
-                      return prevState - 1;
-                    });
+                    setSelectedSuggestionIndex(selectedSuggestionIndex - 1);
                   }
+                  return;
                 }
                 case "ArrowDown": {
                   e.preventDefault();
@@ -92,10 +91,9 @@ function Typeahead({ handleSelect, suggestions }) {
                     selectedSuggestionIndex <
                     filteredSuggestions.length - 1
                   ) {
-                    setSelectedSuggestionIndex(prevState => {
-                      return prevState + 1;
-                    });
+                    setSelectedSuggestionIndex(selectedSuggestionIndex + 1);
                   }
+                  return;
                 }
               }
             }}
