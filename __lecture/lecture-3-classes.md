@@ -99,6 +99,8 @@ class Temperature extends React.Component {
 }
 
 render(<Temperature />)
+
+// It will display: Temperature: 37
 ```
 
 ---
@@ -128,6 +130,7 @@ class Temperature extends React.Component {
 }
 
 render(<Temperature initialT={-10} />)
+// Temperature: 27
 ```
 
 ---

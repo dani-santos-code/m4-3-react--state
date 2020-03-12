@@ -16,12 +16,8 @@ const Button = styled.button`
   background: #EEE;
 `;
 
-const BlueButton = styled.button`
-  padding: 10px;
-  margin: 10px;
-  border-radius: 4px;
-  font-size: 18px;
-  font-weight: bold;
+// we can extend a component like so:
+const BlueButton = styled(Button)`
   background: #2B00D7;
   color: #FFF;
 `
@@ -38,7 +34,11 @@ render(<>
 
 What does the `&` signify, in this snippet?
 
+
 ```jsx
+// you are adding a pseudo-selector with a shorthand
+// last element of its parent
+
 const ListItem = styled.li`
   border-bottom: 1px solid;
 
